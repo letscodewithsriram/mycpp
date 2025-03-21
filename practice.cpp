@@ -45,13 +45,28 @@ void prac_variables() {
     const int myNum1 = 10;
     // myNum1 = myNum1 + 10;
     // practice.cpp:46:23: error: assignment of read-only variable 'myNum1'
-    cout << __LINE__ << " " << myNum1 << "\n"; 
+    //cout << __LINE__ << " " << myNum1 << "\n"; 
     std::cout << "File: " << __FILE__ << ", Function: " << __func__ << ", Line: " << __LINE__ << std::endl;
 
 }
 
 void cpp_version() {
     std::cout << "C++ Version" << __cplusplus << std::endl;
+}
+
+void in_out_calc() {
+    int x, y;
+    int sum;
+
+    cout << "Type the first number\n";
+    std::cin >> x;
+
+    cout << "Type the second number";
+    std::cin >> y;
+
+    sum = x + y;
+
+    cout << "Sum is :" << sum;
 }
 
 int main() {
@@ -67,6 +82,11 @@ int main() {
 
     // Variables 
     prac_variables();
+
+    // Input & Output - Calculator
+    // in_out_calc();
+
+    
     return 0;
 
 
