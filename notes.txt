@@ -1,3 +1,11 @@
 Project Commits: 
 
 https://github.com/letscodewithsriram/mycpp/commits
+
+https://github.com/letscodewithsriram/mycpp/graphs/commit-activity
+
+https://github.com/letscodewithsriram/mycpp/graphs/code-frequency
+
+https://github.com/letscodewithsriram/mycpp/pulse
+
+https://github.com/letscodewithsriram/mycpp/blob/main/practice.cpp

@@ -37,6 +37,17 @@ void prac_variables() {
     << myString <<  " " << typeid(myString).name() << " \n"
     << myBoolean <<  " " <<  typeid(myBoolean).name() << " \n";
 
+    int x, y, z; 
+    x = y = z = 50;
+
+    cout << x + y + z + "\n";
+
+    const int myNum1 = 10;
+    // myNum1 = myNum1 + 10;
+    // practice.cpp:46:23: error: assignment of read-only variable 'myNum1'
+    cout << __LINE__ << " " << myNum1 << "\n"; 
+    std::cout << "File: " << __FILE__ << ", Function: " << __func__ << ", Line: " << __LINE__ << std::endl;
+
 }
 
 void cpp_version() {
