@@ -10,17 +10,25 @@ void prac_print() {
     cout << "String\n";
     cout << 3;
     cout << "\n" << 3 << " String\n";
-    cout << "prac_print >>>> ends";
+    cout << "prac_print >>>> ends\n";
 }
 
 void prac_comments() {
-    
+    std::cout << __PRETTY_FUNCTION__ << " >>>> Starts\n";
+    // singleLine
+
+    /* 
+        Multi-line
+    */
+   cout << __PRETTY_FUNCTION__ << " >>>> Ends\n";
 }
 
 int main() {
 
-    // Calling prac_print
+    // For print practice -> Calling prac_print
     prac_print(); 
 
+    // For comment practice -> Calling prac_comments
+    prac_comments();
     return 0;
 }
