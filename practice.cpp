@@ -3,6 +3,7 @@
 
 # include <iostream>
 # include <typeinfo>
+# include <cmath>
 
 using namespace std;
 
@@ -69,6 +70,37 @@ void in_out_calc() {
     cout << "Sum is :" << sum;
 }
 
+void popertors () {
+    int x = 100 + 50;
+    int sum = x + x;
+    cout << sum;
+    sum++;
+    cout << sum;
+    ++sum;
+    cout << sum;
+    cout << --sum;
+    cout << 301%10;
+}
+
+void peuler_01() {
+
+    /*
+    If we list all the natural numbers below 10 that are multiples of 3 or 5 , we get 3,5,6 and 9. 
+    The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000. 
+    */
+
+    int _i = 0, sum = 0;
+    while ( _i < 1000) {
+        // cout << _i << "\n";
+        if ( _i % 3 == 0 ||  _i % 5 == 0){
+            sum = sum + _i;
+            // cout << _i << " , "  << sum << "\n";
+        }
+        _i++;
+    }
+    cout << "\nSum: " << sum << "\n";
+}
+
 int main() {
 
     // CPP Version
@@ -86,7 +118,11 @@ int main() {
     // Input & Output - Calculator
     // in_out_calc();
 
-    
+    // Operators
+    popertors();
+
+    peuler_01();
+
     return 0;
 
 
