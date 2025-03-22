@@ -7,6 +7,7 @@
 # include <valarray>
 # include <numeric>
 # include <cstdlib>
+# include <vector>
 
 using namespace std;
 
@@ -121,13 +122,13 @@ void peuler_02(){
         if (sum % 2 == 0) {
             evenSum = evenSum + sum;
         }
-        cout << "Array of f: " << fibArr[0] << " , " << fibArr[1] << " = " << sum << " -- Even Sum: " << evenSum << "\n";
+        // cout << "Array of f: " << fibArr[0] << " , " << fibArr[1] << " = " << sum << " -- Even Sum: " << evenSum << "\n";
         fibArr[0] = fibArr[1];
         fibArr[1] = sum;
         _i++;
     }
     // cout << "sum1 "<< sum1 << " sum2 " << sum2;
-    cout << "Even Value is: " << evenSum;
+    // cout << "Even Value is: " << evenSum;
 }
 
 void parray() {
@@ -136,7 +137,30 @@ void parray() {
     //     << " 1st One " << f[0];
     // cout << "\n Accumulate: " <<  accumulate(f, f +2, 0) << "\n";
     // cout << "\n Size of Array: " << sizeof(f[0]);
-    // // int _sum = 
+     
+}
+
+void peuler_03() {
+    // Step 1: Get the Prime Numbers
+    // Step 2: Check whether prime numbers are divisible by the big number.
+    std::vector <int> primeNums;
+    int _i = 1, _j=2;
+    while ( _i < 100) {
+        while ( _j < 100) {
+            if (_j < _i) {
+                cout << "Number : " << _i << " - " << _j << "\n";
+                if (_i % _j == 0) {
+                    
+                }
+            }
+            else {
+                break;
+            }
+            _j++;
+        }
+        _i++; 
+    }
+
 }
  
 int main() {
@@ -168,6 +192,8 @@ int main() {
     peuler_02();
 
     parray();
+
+    peuler_03();
 
     return 0;
 
