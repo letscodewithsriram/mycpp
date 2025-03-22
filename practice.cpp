@@ -4,6 +4,8 @@
 # include <iostream>
 # include <typeinfo>
 # include <cmath>
+# include <valarray>
+# include <numeric>
 
 using namespace std;
 
@@ -101,6 +103,20 @@ void peuler_01() {
     cout << "\nSum: " << sum << "\n";
 }
 
+void peuler_02(){
+    int _i = 1;
+    int fibArr[] = {0,1};
+    int sum = 0;
+    // int prev = 0, cur =0, fib = 0; 
+    while ( _i < 10) {
+        //cout << _i;
+        cout << _i << " , ";
+        sum = accumulate(fibArr, fibArr+2, sum);
+        cout << "da " << sum;
+        _i++;
+    }
+}
+
 int main() {
 
     // CPP Version
@@ -122,6 +138,8 @@ int main() {
     popertors();
 
     peuler_01();
+
+    peuler_02();
 
     return 0;
 
