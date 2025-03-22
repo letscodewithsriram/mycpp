@@ -107,22 +107,29 @@ void peuler_01() {
 void peuler_02(){
     int _i = 1;
     int fibArr[2] = {0,1};
-    int sum = 0;
+    int sum1, sum2;
     // cout << "----> " << fibArr[0] << "\n";
     
     // int prev = 0, cur =0, fib = 0; 
     while ( _i < 10) {
-        //cout << _i;
-        // cout << _i << " , ";
-        sum = accumulate(fibArr, fibArr+2, sum);
-        // cout << "da " << sum;
+        // cout << _i;
+        fibArr[1] = _i;
+        sum1 = accumulate(fibArr, fibArr+2, 0);
+        sum2 = fibArr[0] + fibArr[1];
+        cout << "Array of f: " << fibArr[0] << " , " << fibArr[1] << " = " << sum2 << "\n";
+        fibArr[0] = _i;
         _i++;
     }
+    cout << "sum1 "<< sum1 << " sum2 " << sum2;
 }
 
 void parray() {
-    int f[2] = {0, 1};
-    // cout << f;
+    int f[2] = {2, 10};
+    // cout << "Array Print" << f 
+    //     << " 1st One " << f[0];
+    // cout << "\n Accumulate: " <<  accumulate(f, f +2, 0) << "\n";
+    // cout << "\n Size of Array: " << sizeof(f[0]);
+    // // int _sum = 
 }
  
 int main() {
