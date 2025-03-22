@@ -6,25 +6,26 @@
 # include <cmath>
 # include <valarray>
 # include <numeric>
+# include <cstdlib>
 
 using namespace std;
 
 void prac_print() {
-    cout << "prac_print >>>> starts\n";
-    cout << "String\n";
-    cout << 3;
-    cout << "\n" << 3 << " String\n";
-    cout << "prac_print >>>> ends\n";
+    // cout << "prac_print >>>> starts\n";
+    // cout << "String\n";
+    // cout << 3;
+    // cout << "\n" << 3 << " String\n";
+    // cout << "prac_print >>>> ends\n";
 }
 
 void prac_comments() {
-    std::cout << __PRETTY_FUNCTION__ << " >>>> Starts\n";
+    // std::cout << __PRETTY_FUNCTION__ << " >>>> Starts\n";
     // singleLine
 
     /* 
         Multi-line
     */
-   cout << __PRETTY_FUNCTION__ << " >>>> Ends\n";
+//    cout << __PRETTY_FUNCTION__ << " >>>> Ends\n";
 }
 
 void prac_variables() {
@@ -34,27 +35,27 @@ void prac_variables() {
     string myString = "I'm Sriram";
     bool myBoolean = true;
 
-    std::cout << typeid(myNum).name() << " \n"
-    << myFloatNum << typeid(myFloatNum).name() << " \n"
-    << myChar << " " << typeid(myChar).name() << " \n"
-    << myString <<  " " << typeid(myString).name() << " \n"
-    << myBoolean <<  " " <<  typeid(myBoolean).name() << " \n";
+    // std::cout << typeid(myNum).name() << " \n"
+    // << myFloatNum << typeid(myFloatNum).name() << " \n"
+    // << myChar << " " << typeid(myChar).name() << " \n"
+    // << myString <<  " " << typeid(myString).name() << " \n"
+    // << myBoolean <<  " " <<  typeid(myBoolean).name() << " \n";
 
     int x, y, z; 
     x = y = z = 50;
 
-    cout << x + y + z + "\n";
+    // cout << x + y + z + "\n";
 
     const int myNum1 = 10;
     // myNum1 = myNum1 + 10;
     // practice.cpp:46:23: error: assignment of read-only variable 'myNum1'
-    //cout << __LINE__ << " " << myNum1 << "\n"; 
-    std::cout << "File: " << __FILE__ << ", Function: " << __func__ << ", Line: " << __LINE__ << std::endl;
+    // cout << __LINE__ << " " << myNum1 << "\n"; 
+    // std::cout << "File: " << __FILE__ << ", Function: " << __func__ << ", Line: " << __LINE__ << std::endl;
 
 }
 
 void cpp_version() {
-    std::cout << "C++ Version" << __cplusplus << std::endl;
+    // std::cout << "C++ Version" << __cplusplus << std::endl;
 }
 
 void in_out_calc() {
@@ -75,13 +76,13 @@ void in_out_calc() {
 void popertors () {
     int x = 100 + 50;
     int sum = x + x;
-    cout << sum;
+    // cout << sum;
     sum++;
-    cout << sum;
+    // cout << sum;
     ++sum;
-    cout << sum;
-    cout << --sum;
-    cout << 301%10;
+    // cout << sum;
+    // cout << --sum;
+    // cout << 301%10;
 }
 
 void peuler_01() {
@@ -100,24 +101,35 @@ void peuler_01() {
         }
         _i++;
     }
-    cout << "\nSum: " << sum << "\n";
+    // cout << "\nSum: " << sum << "\n";
 }
 
 void peuler_02(){
     int _i = 1;
-    int fibArr[] = {0,1};
+    int fibArr[2] = {0,1};
     int sum = 0;
+    // cout << "----> " << fibArr[0] << "\n";
+    
     // int prev = 0, cur =0, fib = 0; 
     while ( _i < 10) {
         //cout << _i;
-        cout << _i << " , ";
+        // cout << _i << " , ";
         sum = accumulate(fibArr, fibArr+2, sum);
-        cout << "da " << sum;
+        // cout << "da " << sum;
         _i++;
     }
 }
 
+void parray() {
+    int f[2] = {0, 1};
+    // cout << f;
+}
+ 
 int main() {
+
+    // Clear the Output Screen
+    // system("CLS");
+    // std::cout << "\033[2J\033[H"; 
 
     // CPP Version
     cpp_version();
@@ -140,6 +152,8 @@ int main() {
     peuler_01();
 
     peuler_02();
+
+    parray();
 
     return 0;
 
