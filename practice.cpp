@@ -107,20 +107,27 @@ void peuler_01() {
 void peuler_02(){
     int _i = 1;
     int fibArr[2] = {0,1};
-    int sum1, sum2;
+    int sum1, sum2, sum, evenSum = 0;
     // cout << "----> " << fibArr[0] << "\n";
     
     // int prev = 0, cur =0, fib = 0; 
-    while ( _i < 10) {
+    while ( _i < 100) {
         // cout << _i;
-        fibArr[1] = _i;
-        sum1 = accumulate(fibArr, fibArr+2, 0);
-        sum2 = fibArr[0] + fibArr[1];
-        cout << "Array of f: " << fibArr[0] << " , " << fibArr[1] << " = " << sum2 << "\n";
-        fibArr[0] = _i;
+        // sum1 = accumulate(fibArr, fibArr+2, 0);
+        sum = fibArr[0] + fibArr[1];
+        if (sum > 5000000) {
+            break;
+        } 
+        if (sum % 2 == 0) {
+            evenSum = evenSum + sum;
+        }
+        cout << "Array of f: " << fibArr[0] << " , " << fibArr[1] << " = " << sum << " -- Even Sum: " << evenSum << "\n";
+        fibArr[0] = fibArr[1];
+        fibArr[1] = sum;
         _i++;
     }
-    cout << "sum1 "<< sum1 << " sum2 " << sum2;
+    // cout << "sum1 "<< sum1 << " sum2 " << sum2;
+    cout << "Even Value is: " << evenSum;
 }
 
 void parray() {
