@@ -145,10 +145,11 @@ void peuler_03() {
     // Step 2: Check whether prime numbers are divisible by the big number.
     std::vector <int> primeNums;
     int _i = 1, _j=2;
-    while ( _i < 100) {
-        while ( _j < 100) {
+    while ( _i < 10) {
+        _j = 2;
+        while ( _j < 10) {
             if (_j < _i) {
-                cout << "Number : " << _i << " - " << _j << "\n";
+                cout << "I = " << _i << " - J = " << _j << "\n";
                 if (_i % _j == 0) {
                     
                 }
