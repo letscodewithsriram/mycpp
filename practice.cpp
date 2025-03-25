@@ -149,7 +149,7 @@ void peuler_03() {
         _j = 2;
         while ( _j < 10) {
             if (_j < _i) {
-                cout << "I = " << _i << " - J = " << _j << "\n";
+                // cout << "I = " << _i << " - J = " << _j << "\n";
                 if (_i % _j == 0) {
                     
                 }
@@ -172,18 +172,48 @@ struct {
   myStructure.myString = "Hello World!";
   
   // Print members of myStructure
-  cout << myStructure.myNum << "\n";
-  cout << myStructure.myString << "\n";
+//   cout << myStructure.myNum << "\n";
+//   cout << myStructure.myString << "\n";
 
 }
 
 void ppointer() {
     int n = 100;
     cout << "n = " << n << " Address = " << &n << endl; 
+    
+    std::string hex_str = "0x61ff0c";
+
+    // Convert the hexadecimal string to a decimal integer
+    unsigned long decimal_value = std::stoul(hex_str, nullptr, 16);
+
+    // Output the decimal value
+    std::cout << "Decimal value: " << decimal_value << std::endl;
+
 }
 
+
+
+
+void sum_square_diff() {
+    int _i = 1; 
+    int _square_sum = 0;
+    int _sum_square = 0;
+    while ( _i <= 100 ) {
+       // std::cout << "I = " << _i << std::endl;
+        _square_sum = _square_sum + (_i*_i);
+        _sum_square = _sum_square + _i;
+        _i++;
+    }
+
+    cout << "SUM_SQUARE = " << _sum_square*_sum_square << std::endl;
+    cout << "SQUARE_SUM = " << _square_sum << std::endl;
+
+    cout << "FINAL_OUTPUT = " << (_sum_square * _sum_square) - _square_sum  << std::endl;
+}
  
 int main() {
+
+    sum_square_diff();
 
     ppointer();
  
