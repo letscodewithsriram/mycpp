@@ -210,8 +210,19 @@ void sum_square_diff() {
 
     cout << "FINAL_OUTPUT = " << (_sum_square * _sum_square) - _square_sum  << std::endl;
 }
+
+void p2pointers () {
+    int arr[] = {1, 2, 3, 4, 5};  
+    int *ptr = arr;
+
+    for (int i = 0; i < 5; i++) {
+        std::cout << "Element " << i << " : " << *(ptr + i) << std::endl;  // Pointer arithmetic
+    }
+}
  
 int main() {
+
+    p2pointers();
 
     sum_square_diff();
 
