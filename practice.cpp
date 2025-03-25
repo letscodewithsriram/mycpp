@@ -176,9 +176,17 @@ struct {
   cout << myStructure.myString << "\n";
 
 }
+
+void ppointer() {
+    int n = 100;
+    cout << "n = " << n << " Address = " << &n << endl; 
+}
+
  
 int main() {
 
+    ppointer();
+ 
     // Clear the Output Screen
     // system("CLS");
     // std::cout << "\033[2J\033[H"; 
