@@ -8,6 +8,11 @@
 # include <numeric>
 # include <cstdlib>
 # include <vector>
+# include <iostream>
+# include <fstream>
+# include <sstream>
+# include <string>
+# include <map>
 
 using namespace std;
 
@@ -219,8 +224,46 @@ void p2pointers () {
         std::cout << "Element " << i << " : " << *(ptr + i) << std::endl;  // Pointer arithmetic
     }
 }
- 
+
+void peuler_11() {
+    
+    using namespace std;
+    
+    std::ifstream file("references/names.txt");  // Open the file
+    std::string line;
+    std::map<std::string, int> alpha_score;
+
+    alpha_score["A"] = 1;
+
+
+    if (!file.is_open()) {
+        std::cerr << "Error opening file." << std::endl;
+    }
+
+    while (std::getline(file, line)) {  // Read each line
+        std::stringstream ss(line);
+        std::string word;
+
+        // Split line by commas and print each word
+        while (std::getline(ss, word, ',')) {
+            if (!word.empty() && word.front() == '"') {
+                word.erase(0, 1);  // Remove first quote
+            }
+            if (!word.empty() && word.back() == '"') {
+                word.erase(word.size() - 1, 1);  // Remove last quote
+            }
+             std::cout << word << " ";  // Print each word
+        }
+        std::cout << std::endl;
+    }
+
+    file.close();
+}
+
+
 int main() {
+
+    peuler_11 ();
 
     p2pointers();
 
