@@ -260,8 +260,14 @@ void peuler_11() {
     file.close();
 }
 
+void paramFuns(string fname) {
+    cout << fname << " Refsnes\n";
+}  
+
 
 int main() {
+
+    paramFuns("Sriram");
 
     peuler_11 ();
 
