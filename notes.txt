@@ -1,3 +1,10 @@
+Shortcuts:
+
+Ctrl + Tab - Git Commits
+Ctrl + 1 - Git Push
+
+Ctrl + q - Clear Output Screen
+
 Project Commits: 
 
 https://github.com/letscodewithsriram/mycpp/commits
