@@ -264,8 +264,24 @@ void paramFuns(string fname) {
     cout << fname << " Refsnes\n";
 }  
 
+void excep() {
+    try {
+        int age = 15;
+        if (age >= 18) {
+          cout << "Access granted - you are old enough.";
+        } else {
+          throw (age);
+        }
+      }
+      catch (int myNum) {
+        cout << "Access denied - You must be at least 18 years old.\n";
+        cout << "Age is: " << myNum;
+      }
 
+}
 int main() {
+
+    excep();
 
     paramFuns("Sriram");
 
