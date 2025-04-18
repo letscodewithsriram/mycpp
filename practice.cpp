@@ -321,7 +321,6 @@ void peuler11() {
 
 }
 
-
 int main() {
 
     peuler11();
